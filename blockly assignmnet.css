@@ -1,0 +1,136 @@
+:root {
+    --bg: #ffffff;
+    --alt-bg: #f9f9f9;
+    --text: #222;
+    --subtitle: #555;
+    --highlight: #facc15;
+    --hello-bg: #22d3ee;
+    --gray-shape: #ccc;
+    --link: #000;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --alt-bg: #1e1e1e;
+    --text: #f1f1f1;
+    --subtitle: #aaaaaa;
+    --hello-bg: #0ea5e9;
+    --gray-shape: #444;
+    --link: #f1f1f1;
+}
+
+/* Default profile name color */
+.profile-name {
+    color: var(--link);
+    transition: color 0.3s ease;
+}
+
+/* Highlighted color in dark theme */
+[data-theme="dark"] .profile-name {
+    color: #38bdf8;
+    /* sky blue */
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    background: transparent;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: var(--link);
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--highlight);
+}
+
+.hero {
+    min-height: 100vh;
+    padding-top: 120px;
+    position: relative;
+}
+
+.hello-box {
+    background: var(--hello-bg);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+}
+
+.hero h1 strong {
+    color: var(--highlight);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: var(--subtitle);
+}
+
+.profile {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.btn-custom {
+    transition: all 0.3s;
+}
+
+.btn-custom:active {
+    background-color: #0f172a !important;
+    color: #fff !important;
+}
+
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    color: var(--link);
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--highlight);
+}
+
+.section {
+    padding: 5rem 2rem;
+    background: var(--bg);
+}
+
+.bg-alt {
+    background: var(--alt-bg);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
